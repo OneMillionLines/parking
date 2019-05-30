@@ -1,0 +1,47 @@
+{
+    "name":"MySpace",
+    "version": "1.0.0",
+    "description": "ParkingManagementSystem",
+    "author": "Muhammad Aslam <md.aslam@samsung.com>",
+    "private": true,
+    "scripts": {
+      "dev": "node build/dev-server.js",
+      "build": "node build/build.js",
+      "deploy": "node config/deploy.js",
+      "lint": "eslint --ext .js,.vue src"
+    },
+    "dependencies": {
+      "sorted-json":"0.2.5",
+      "sorted-array": "2.0.4",
+      "lodash":"4.17.11",
+      "@hapi/hapi":"18.3.1",
+      "pg-promise":"8.7.2",
+      "async-redis":"1.1.7",
+      "amqplib":"0.5.3",
+      "nodemailer":"6.2.1"
+    },
+    "devDependencies": {
+      "extract-text-webpack-plugin": "^2.0.0",
+      "file-loader": "^0.10.0",
+      "friendly-errors-webpack-plugin": "^1.1.3",
+      "function-bind": "^1.1.0",
+      "html-webpack-plugin": "^2.28.0",
+      "http-proxy-middleware": "^0.17.3",
+      "url-loader": "^0.5.7",
+      "webpack": "^2.2.1",
+      "webpack-bundle-analyzer": "^2.2.1",
+      "webpack-dev-middleware": "^1.10.0",
+      "webpack-hot-middleware": "^2.16.1",
+      "webpack-merge": "^2.6.1"
+    },
+    "engines": {
+      "node": ">= 4.0.0",
+      "npm": ">= 3.0.0"
+    },
+    "browserlist": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 8"
+    ]
+  }
+  
