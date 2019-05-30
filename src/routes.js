@@ -154,5 +154,29 @@ const routes = [
       return description;
     }
   },
+
+  //  end of parking crud routes
+  //start of user routes
+  {
+    method: "POST",
+    path: "/user",
+    handler: async function(req, res) {
+      let payload = req.payload;
+      let result = [];
+      let promises = [];
+      let command = "INSERT INTO user_table(vehicle_no, vehicle_data) VALUES ($1,$2)";
+      let values = [payload.vehicle_no, payload];
+      promises.push(
+        db
+          .any(command, values)
+          .then(data => {
+            result.push(payload.vehicle_no+" is inserted");
+          })
+          .catch(error => (console.log("ERROR:", error),result.push("On inserting "+values+" we get error: "+error.detail)))
+      );
+      await Promise.all(promises);
+      return result;
+    }
+  },
 ]
 module.exports = routes;
