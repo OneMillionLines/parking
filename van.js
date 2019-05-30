@@ -14,7 +14,7 @@ class Van extends parking{
         this.print();
     }
     print(){
-        console.log("\nCAR DATA");
+        console.log("\nVAN DATA");
         console.log(this.id,this.descr,this.size,this.price,this.Tcount);
         console.log("==========================");
     }
